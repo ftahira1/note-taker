@@ -10,7 +10,7 @@ const routes = require('./routes/index'); // index.js is implied
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
 
-const PORT = 5555;
+const PORT = process.env.PORT || 3003;
 
 const app = express();
 
