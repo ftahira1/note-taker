@@ -5,13 +5,13 @@ const uuid = require('../helpers/uuid');
 const db = require("../db/notes.json");
 const fs = require("fs");
 let notesData = db;
-// GET Route for retrieving all the tips
+// GET Route for retrieving all the notes
 notes.get('/notes', (req, res) => {
   console.info(`${req.method} request received for notes`);
   readFromFile('./db/notes.json').then((data) => res.json(JSON.parse(data)));
 });
 
-// POST Route for a new UX/UI tip
+// POST Route for a new UX/UI note
 notes.post('/notes', (req, res) => {
   console.info(`${req.method} request received to add a note`);
   console.log(req.body);
